@@ -5,7 +5,7 @@
 
 <div th:replace="fragments::menu"/>
 
-<div class="container" th:object="${customer}">
+<div class="container" th:object="${gp}">
     <h1 th:text="*{name}" class="text-primary"/>
     <table class="table">
         <tr>
@@ -27,6 +27,14 @@
         <tr>
             <td style="font-weight: bold">Country</td>
             <td th:text="*{country}"/>
+        </tr>
+        <tr>
+            <td style="font-weight: bold">Tel.</td>
+            <td th:text="*{tel}"/>
+        </tr>
+        <tr>
+            <td style="font-weight: bold">Email</td>
+            <td th:text="*{email}"/>
         </tr>
     </table>
     <button class="btn btn-primary" onclick="history.back()">back</button>

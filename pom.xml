@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dasniko</groupId>
-    <artifactId>keycloak-springboot-demo</artifactId>
+    <groupId>nhs</groupId>
+    <artifactId>keycloak-springboot-demo1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>keycloak-springboot-demo</name>
+    <name>keycloak-springboot-demo1</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -44,10 +44,11 @@
             <artifactId>keycloak-tomcat8-adapter</artifactId>
             <version>${keycloak.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
+            <version>1.16.16</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

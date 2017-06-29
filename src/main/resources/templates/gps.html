@@ -6,8 +6,8 @@
 <div th:replace="fragments::menu"/>
 
 <div class="container">
-    <h1>Customers</h1>
-    <form th:action="@{/customers}" method="get">
+    <h1>GPs</h1>
+    <form th:action="@{/gps}" method="get">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search..." id="q" name="q"/>
             <span class="input-group-btn">
@@ -26,9 +26,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="c : ${customerList}">
+        <tr th:each="c : ${gpList}">
             <td>
-                <a th:text="${c.name}" th:href="@{/customers/{id}(id=${c.id})}"/>
+                <a th:text="${c.name}" th:href="@{/gps/{id}(id=${c.id})}"/>
             </td>
             <td th:text="${c.street}"></td>
             <td th:text="${c.city}"></td>

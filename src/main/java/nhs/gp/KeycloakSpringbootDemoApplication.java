@@ -1,4 +1,4 @@
-package dasniko.customer;
+package nhs.gp;
 
 import org.keycloak.KeycloakPrincipal;
 import org.keycloak.representations.AccessToken;
