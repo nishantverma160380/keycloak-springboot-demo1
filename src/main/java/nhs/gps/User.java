@@ -3,13 +3,12 @@ package nhs.gps;
 import lombok.Value;
 
 @Value
-class Gp {
-    private final Long id;
-    private final String city;
-    private final String name;
-    private final String street;
-    private final String zip;
-    private final String country;
-    private final String tel;
+class User {
+    private final String id;
     private final String email;
+    private final String username;
+    private final String fullName;
+    private final String first;
+    private final String last;
+    private final String nhsNo;
 }

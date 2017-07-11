@@ -5,36 +5,32 @@
 
 <div th:replace="fragments::menu"/>
 
-<div class="container" th:object="${gp}">
-    <h1 th:text="*{name}" class="text-primary"/>
+<div class="container" th:object="${user}">
+    <h1 th:text="*{fullName}" class="text-primary"/>
     <table class="table">
         <tr>
             <td style="font-weight: bold">Name</td>
-            <td th:text="*{name}"/>
+            <td th:text="*{fullName}"/>
         </tr>
         <tr>
-            <td style="font-weight: bold">Street</td>
-            <td th:text="*{street}"/>
+            <td style="font-weight: bold">UserName</td>
+            <td th:text="*{username}"/>
         </tr>
         <tr>
-            <td style="font-weight: bold">City</td>
-            <td th:text="*{city}"/>
-        </tr>
-        <tr>
-            <td style="font-weight: bold">ZIP</td>
-            <td th:text="*{zip}"/>
-        </tr>
-        <tr>
-            <td style="font-weight: bold">Country</td>
-            <td th:text="*{country}"/>
-        </tr>
-        <tr>
-            <td style="font-weight: bold">Tel.</td>
-            <td th:text="*{tel}"/>
+            <td style="font-weight: bold">NHS No.</td>
+            <td th:text="*{nhsNo}"/>
         </tr>
         <tr>
             <td style="font-weight: bold">Email</td>
             <td th:text="*{email}"/>
+        </tr>
+        <tr>
+            <td style="font-weight: bold">First Name</td>
+            <td th:text="*{first}"/>
+        </tr>
+        <tr>
+            <td style="font-weight: bold">Last Name</td>
+            <td th:text="*{last}"/>
         </tr>
     </table>
     <button class="btn btn-primary" onclick="history.back()">back</button>

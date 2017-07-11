@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD target/liverpoolGp.jar liverpoolGp.jar
-EXPOSE 8081
-ENTRYPOINT [ "java" , "-jar" , "liverpoolGp.jar" ]
+ADD target/userNhs.jar userNhs.jar
+EXPOSE 8283
+ENTRYPOINT [ "java" , "-jar" , "userNhs.jar" ]

@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 public class CrmController {
 
     private final GpRepository gpRepository;
+    private final UserRepository userRepository;
 
     @RequestMapping
     public String home() {
@@ -28,15 +29,21 @@ public class CrmController {
     }
 
     @RequestMapping("/gps")
-    public String gps(Model model) {
+    public String gps(Model model) throws Exception {
         model.addAttribute(gpRepository.findAll());
         return "gps";
     }
 
     @RequestMapping("/gps/{id}")
-    public String gp(@PathVariable("id") Long id, Model model) {
+    public String gp(@PathVariable("id") Long id, Model model) throws Exception {
         model.addAttribute(gpRepository.findOne(id));
         return "gp";
+    }
+
+    @RequestMapping("/user")
+    public String userDtls(HttpServletRequest req, Model model) throws Exception {
+        model.addAttribute(userRepository.getUser(req));
+        return "user";
     }
 
 }
